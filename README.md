@@ -1,24 +1,30 @@
-# README
+# 浅見与し三 ECサイト
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+### サイトテーマ
+茶道や飲食店をしている方向けの販売を目的としたECサイト
 
-Things you may want to cover:
+### テーマを選んだ理由
+私の実家では家業として陶器製造を行なっております。
+現在は卸売をメインに行なっており、利益率の低さや販売地域が小売業者任せになっています。
+そこでecサイトを作ることによって中抜きされていた費用を低減でき、全国展開できると考えたからです。
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### ターゲットユーザ
+- 茶道を趣味や習い事で始める方
+- 新規オープンの飲食店を経営される方
+- 料理をする際に器にこだわっている方
+​
+### 主な利用シーン
+- 茶道で新しく抹茶茶碗を購入する時
+- 季節にあった柄の食器を購入する時
+- 新作ができた時に素早く知ってもらう時
+​
+## 設計書
+​
+## 開発環境
+- OS：MacOS
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
+​
