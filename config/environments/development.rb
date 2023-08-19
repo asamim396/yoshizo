@@ -69,7 +69,7 @@ Rails.application.configure do
 
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
- 
+  config.active_job.queue_adapter = :inline
  
   config.hosts.clear
   # Uncomment if you wish to allow Action Cable access from any origin.
