@@ -1,11 +1,7 @@
-<h1>会員情報編集アド</h1>
- <%= form_with model: @customer, url: admin_customer_path, method: :patch do |f| %>
- <table class="table">
+
+  <%= form_with model: @customer, url: customers_information_edit_path, method: :patch do |f| %>
+  <table class="table">
     <tbody>
-      <tr>
-        <td>会員ID</td>
-        <td><%= @customer.id %></td>
-      </tr>
       <tr>
         <td>氏名</td>
         <td><%= f.text_field :last_name, class: "form-control", style: "width: 200px;" %></td>
@@ -36,15 +32,9 @@
         <td></td>
       </tr>
       <tr>
-        <td>会員ステータス</td>
-        <td><%= f.radio_button :is_deleted, "false" %> <%= f.label :is_deleted_false, "有効" %>
-            <%= f.radio_button :is_deleted, "true" %> <%= f.label :is_deleted_true, "退会" %></td>
-      </tr>
-      <tr>
         <td></td>
         <td><%= f.submit "編集内容を保存", class:"btn btn-success" %></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <% end %>
+ <% end %>

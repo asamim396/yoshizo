@@ -1,8 +1,32 @@
-<% @items.each do |item| %>
-     
-        
-          <div><%= item.id %></div>
-      <div><%=link_to item.name, admin_item_path(item), class: "text-dark" %></div>
-          <div><%= item.price %></div>
-<% end %>
-<h1>aaa</h1>
+
+
+<div class= "container">
+  <div class="row mt-5">
+    <h4 class="col-4 text-center bg-light">商品一覧</h4>
+    <div class="col-1 offset-7">
+    <%= link_to new_admin_item_path do %>
+      <i class="fa-regular fa-square-plus fa-2xl" style="color: #000000;"></i>
+    <% end %>
+    </div>
+  </div>
+
+  <br>
+  <table class="table">
+    <thead>
+      <tr class="bg-light">
+        <th>商品ID</th>
+        <th>商品名</th>
+        <th>税抜価格</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @items.each do |item| %>
+        <tr>
+          <td><%= item.id %></td>
+          <td><u><%=link_to item.name, admin_item_path(item), class: "text-dark" %></u></td>
+          <td><%= item.price %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
