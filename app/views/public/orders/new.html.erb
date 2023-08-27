@@ -10,6 +10,16 @@
       <div class="form-group">
         <span><%= f.radio_button :select_address, 0, checked: true, class: "ml-4" %>
         <%= f.label :select_address, "ご自身の住所" %></span><br>
+        <div class="form-group">
+        <span><%= f.radio_button :select_address, 1, class: "ml-4 mt-3" %>
+        <%= f.label :select_address, "登録済住所から選択" %></span><br>
+        <% if current_customer.addresses.empty? %>
+          登録住所はありません<br>
+        <% else %>
+          <div class="col-10 ml-4">
+            <%= f.select :address_id, options_from_collection_for_select(current_customer.addresses.all, :id, :address_display), {}, class: "form-control" %>
+          </div>
+        <% end %>
 
         <%= f.radio_button :select_address, 2, class: "ml-4 mt-3" %>
         <%= f.label :destination, "新しいお届け先" %>

@@ -1,1 +1,30 @@
-<h1>ようこそトップページパブ</h1>
+<div class="flash text-center font-weight-bold"><%= flash[:left] %></div>
+<div class="container">
+  <div class="row">
+    <div class="col-2"></div>
+    </div>
+    <div class="col-10">
+  <div class="center">
+    <div class="text-center mt-5", style="background-color: #5A9AFB;">
+      ようこそ、yoshizoへ!!</br>
+      このサイトは、陶器のECサイトになります。</br>
+    </div>
+  </div>
+  <h3 class="text-center mt-5 mb-5">新着商品</h3>
+
+  <div class="row mt-5 justify-content-center">
+    <% @items.first(4).each do |item| %>
+       <div class="col-md-3 mb-4">
+         <div class="text-center">
+          <%= link_to item_path(item.id) do %>
+           <%=image_tag item.item_image, size:'100x100' %>
+          <% end %>
+       　<%= item.name %>
+      　<%= item.with_tax_price %>円(税込)</div>
+      </div>
+    <% end %>
+    </div>
+    <div class="col-md-3 mb-4 ml-auto">
+      <%= link_to "全ての商品を見る >", items_path %>
+    </div>
+  </div>
