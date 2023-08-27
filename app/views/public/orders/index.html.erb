@@ -10,7 +10,6 @@
           <th class="text-center table-active">配送先</th>
           <th class="text-center table-active">注文商品</th>
           <th class="text-center table-active">支払金額</th>
-          <th class="text-center table-active">ステータス</th>
           <th class="text-center table-active">注文詳細</th>
         </tr>
       </thead>
@@ -30,7 +29,6 @@
               <% end %>
             </td>
             <td class="text-center align-middle"><%= order.total_price.to_s(:delimited) %>円</td>
-            <td class="text-center align-middle"><%= order.status %></td>
             <td class="text-center align-middle"><%= link_to "表示する", order_path(order), class: "btn btn-primary"  %></td>
           </tr>
         <% end %>
